@@ -1,0 +1,50 @@
+# Code Modularity and Size Rules
+
+## File Size Limits
+- Keep all code files under 500 lines
+- Break down large components into smaller, focused modules
+- Each component should have a single responsibility
+
+## Component Structure Rules
+- Create separate files for each major component
+- Extract reusable logic into custom hooks
+- Split complex UI into smaller sub-components
+- Use composition over large monolithic components
+
+## File Organization
+- Group related components in feature folders
+- Separate business logic from UI components
+- Create shared utilities and helpers in dedicated files
+- Use index files for clean imports
+
+## When Creating Components
+1. Start with the smallest possible component
+2. Extract repeated patterns into reusable components
+3. Break down complex forms into smaller form components
+4. Separate data fetching logic from presentation
+5. Create custom hooks for state management
+
+## Code Quality Guidelines
+- Each function should do one thing well
+- Keep functions under 50 lines when possible
+- Extract complex calculations into separate utility functions
+- Use TypeScript interfaces for clear data contracts
+- Prefer composition over inheritance
+
+## Example Structure
+```
+src/
+├── components/
+│   ├── ui/           # Reusable UI components
+│   ├── forms/        # Form-specific components
+│   └── features/     # Feature-specific components
+├── hooks/            # Custom React hooks
+├── utils/            # Utility functions
+└── types/            # TypeScript type definitions
+```
+
+## Enforcement
+- Always suggest breaking down files over 500 lines
+- Recommend extracting reusable patterns
+- Suggest creating custom hooks for complex state
+- Encourage component composition over large files 
